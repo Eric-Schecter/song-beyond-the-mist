@@ -1,6 +1,6 @@
 # Song Beyond the Mist · 雾尽之歌
 
-![Game cover](assets/refined/title_departure.png)
+![Game cover](docs/images/cover.png)
 
 A pixel-art action RPG about a village without water, a missing princess, and a journey into the mist. Chapter One is playable, with Chinese and English options.
 
