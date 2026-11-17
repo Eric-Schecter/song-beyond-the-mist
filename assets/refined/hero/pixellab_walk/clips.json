@@ -1,0 +1,38 @@
+{
+  "north": [
+    "north_clean_00.png",
+    "north_clean_01.png",
+    "north_clean_02.png",
+    "north_clean_03.png",
+    "north_clean_04.png",
+    "north_clean_05.png",
+    "north_clean_06.png",
+    "north_clean_07.png",
+    "north_clean_08.png",
+    "north_clean_09.png",
+    "north_clean_10.png",
+    "north_clean_11.png",
+    "north_clean_12.png",
+    "north_clean_13.png",
+    "north_clean_14.png",
+    "north_clean_15.png"
+  ],
+  "south": [
+    "south_v2_00.png",
+    "south_v2_01.png",
+    "south_v2_02.png",
+    "south_v2_03.png",
+    "south_v2_04.png",
+    "south_v2_05.png",
+    "south_v2_06.png",
+    "south_v2_07.png",
+    "south_v2_08.png",
+    "south_v2_09.png",
+    "south_v2_10.png",
+    "south_v2_11.png",
+    "south_v2_12.png",
+    "south_v2_13.png",
+    "south_v2_14.png",
+    "south_v2_15.png"
+  ]
+}

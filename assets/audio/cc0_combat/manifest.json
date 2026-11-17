@@ -1,0 +1,252 @@
+[
+  {
+    "file": "sword.1.wav",
+    "original": "sword.1.ogg",
+    "source": "https://opengameart.org/content/20-sword-sound-effects-attacks-and-clashes",
+    "author": "StarNinjas",
+    "license": "CC0",
+    "original_sha256": "4a3e80705619cbd7500682ab51004011ddf67e14ccf1818ceb9e5b539fe42b75",
+    "trim_start_seconds": 0.12727891156462584,
+    "gain": 0.42864985465515487
+  },
+  {
+    "file": "sword.10.wav",
+    "original": "sword.10.ogg",
+    "source": "https://opengameart.org/content/20-sword-sound-effects-attacks-and-clashes",
+    "author": "StarNinjas",
+    "license": "CC0",
+    "original_sha256": "530bf3daac9e21ba7f8414291820bc8c26f3522ecbda8f00e6454b1cef74cd07",
+    "trim_start_seconds": 0.19267573696145124,
+    "gain": 0.6134122779390973
+  },
+  {
+    "file": "sword.2.wav",
+    "original": "sword.2.ogg",
+    "source": "https://opengameart.org/content/20-sword-sound-effects-attacks-and-clashes",
+    "author": "StarNinjas",
+    "license": "CC0",
+    "original_sha256": "e74221f6cec0acaa7c19095618c683c3cdc1741f02193b61cb28a2ec56cbfce2",
+    "trim_start_seconds": 0.19895691609977323,
+    "gain": 0.26971787458770635
+  },
+  {
+    "file": "sword.3.wav",
+    "original": "sword.3.ogg",
+    "source": "https://opengameart.org/content/20-sword-sound-effects-attacks-and-clashes",
+    "author": "StarNinjas",
+    "license": "CC0",
+    "original_sha256": "ce09eb2987531d1323415065d7811a9cf0ea8639766d9fa77655d602e7e14989",
+    "trim_start_seconds": 0.034013605442176874,
+    "gain": 0.35134349525652947
+  },
+  {
+    "file": "sword.4.wav",
+    "original": "sword.4.ogg",
+    "source": "https://opengameart.org/content/20-sword-sound-effects-attacks-and-clashes",
+    "author": "StarNinjas",
+    "license": "CC0",
+    "original_sha256": "320aa8a77d35f9354c3d7e03a53e987ae67b0c5721f0dd2680100c5e6b5e4cc4",
+    "trim_start_seconds": 0.04512471655328798,
+    "gain": 0.35508830118892715
+  },
+  {
+    "file": "sword.5.wav",
+    "original": "sword.5.ogg",
+    "source": "https://opengameart.org/content/20-sword-sound-effects-attacks-and-clashes",
+    "author": "StarNinjas",
+    "license": "CC0",
+    "original_sha256": "135d1b26aad8d2f2205e56c14cd0162755a883e9419d6fd955cb978126a77452",
+    "trim_start_seconds": 0.21006802721088436,
+    "gain": 0.47929683847123944
+  },
+  {
+    "file": "sword.6.wav",
+    "original": "sword.6.ogg",
+    "source": "https://opengameart.org/content/20-sword-sound-effects-attacks-and-clashes",
+    "author": "StarNinjas",
+    "license": "CC0",
+    "original_sha256": "5b6eaaac9c552ce364cfdea3c12cef846c89796fc9bb880181615f43ee4e4779",
+    "trim_start_seconds": 0.013356009070294784,
+    "gain": 0.32183847110950065
+  },
+  {
+    "file": "sword.7.wav",
+    "original": "sword.7.ogg",
+    "source": "https://opengameart.org/content/20-sword-sound-effects-attacks-and-clashes",
+    "author": "StarNinjas",
+    "license": "CC0",
+    "original_sha256": "66f2a2e63182fa14470a63fc4a862ff77fa861f69a6a41d8e9874c9853c2d9dd",
+    "trim_start_seconds": 0.14215419501133786,
+    "gain": 0.4802365896399162
+  },
+  {
+    "file": "sword.8.wav",
+    "original": "sword.8.ogg",
+    "source": "https://opengameart.org/content/20-sword-sound-effects-attacks-and-clashes",
+    "author": "StarNinjas",
+    "license": "CC0",
+    "original_sha256": "97f55774d7f0602c5f87e4ef289fcdf7ff07eea987ddc52849909d74374458a6",
+    "trim_start_seconds": 0.22099773242630386,
+    "gain": 0.36669250559239974
+  },
+  {
+    "file": "sword.9.wav",
+    "original": "sword.9.ogg",
+    "source": "https://opengameart.org/content/20-sword-sound-effects-attacks-and-clashes",
+    "author": "StarNinjas",
+    "license": "CC0",
+    "original_sha256": "11d11e060c3172cf0573620e9c6f57855eca017c7ab4a995a1aa276f176eb4b7",
+    "trim_start_seconds": 0.5091609977324263,
+    "gain": 0.5976326187723284
+  },
+  {
+    "file": "sword_clash.1.wav",
+    "original": "sword_clash.1.ogg",
+    "source": "https://opengameart.org/content/20-sword-sound-effects-attacks-and-clashes",
+    "author": "StarNinjas",
+    "license": "CC0",
+    "original_sha256": "5c5e78e466ba78fe2414f2b7a2a6eb674822ccfc8a8bc9fda32be22f5dde5e69",
+    "trim_start_seconds": 0.15689342403628118,
+    "gain": 0.258187611042558
+  },
+  {
+    "file": "sword_clash.10.wav",
+    "original": "sword_clash.10.ogg",
+    "source": "https://opengameart.org/content/20-sword-sound-effects-attacks-and-clashes",
+    "author": "StarNinjas",
+    "license": "CC0",
+    "original_sha256": "61d40c241c5df7722249983938109564a8470245116fe34d23d2a35324d3a4f1",
+    "trim_start_seconds": 0.20290249433106575,
+    "gain": 0.3357596165274422
+  },
+  {
+    "file": "sword_clash.2.wav",
+    "original": "sword_clash.2.ogg",
+    "source": "https://opengameart.org/content/20-sword-sound-effects-attacks-and-clashes",
+    "author": "StarNinjas",
+    "license": "CC0",
+    "original_sha256": "e09f222b70d53f2967514d076e2ae50c21526ac640fe4919965f964af043da1a",
+    "trim_start_seconds": 0.028820861678004534,
+    "gain": 0.31202895147012405
+  },
+  {
+    "file": "sword_clash.3.wav",
+    "original": "sword_clash.3.ogg",
+    "source": "https://opengameart.org/content/20-sword-sound-effects-attacks-and-clashes",
+    "author": "StarNinjas",
+    "license": "CC0",
+    "original_sha256": "6c588bc79b7e4fe202e3b65fa849954d684d2d2342f6ad04813540854c421663",
+    "trim_start_seconds": 0.10709750566893424,
+    "gain": 0.30541808382368735
+  },
+  {
+    "file": "sword_clash.4.wav",
+    "original": "sword_clash.4.ogg",
+    "source": "https://opengameart.org/content/20-sword-sound-effects-attacks-and-clashes",
+    "author": "StarNinjas",
+    "license": "CC0",
+    "original_sha256": "4c2c962f8703882b8a6f863c1f5a35c6ae518d0281755fac9a13e63a73b86fa5",
+    "trim_start_seconds": 0.040612244897959185,
+    "gain": 0.2656867202339529
+  },
+  {
+    "file": "sword_clash.5.wav",
+    "original": "sword_clash.5.ogg",
+    "source": "https://opengameart.org/content/20-sword-sound-effects-attacks-and-clashes",
+    "author": "StarNinjas",
+    "license": "CC0",
+    "original_sha256": "09e36369f2556e6a234ce78ec797447518ef7671f8224fc64747a7fa66ea229a",
+    "trim_start_seconds": 0.12589569160997732,
+    "gain": 0.29061037053774247
+  },
+  {
+    "file": "sword_clash.6.wav",
+    "original": "sword_clash.6.ogg",
+    "source": "https://opengameart.org/content/20-sword-sound-effects-attacks-and-clashes",
+    "author": "StarNinjas",
+    "license": "CC0",
+    "original_sha256": "4c7643dbcd813eb614a56451652987d37ba587fac3309303aa0ab9a27d3a7e71",
+    "trim_start_seconds": 0.2147845804988662,
+    "gain": 0.31285509517122034
+  },
+  {
+    "file": "sword_clash.7.wav",
+    "original": "sword_clash.7.ogg",
+    "source": "https://opengameart.org/content/20-sword-sound-effects-attacks-and-clashes",
+    "author": "StarNinjas",
+    "license": "CC0",
+    "original_sha256": "6763e519e7b31250a78f514d2b8b4f4e73a3bb105c980844ea687d698364b80c",
+    "trim_start_seconds": 0.12142857142857143,
+    "gain": 0.35274301098667743
+  },
+  {
+    "file": "sword_clash.8.wav",
+    "original": "sword_clash.8.ogg",
+    "source": "https://opengameart.org/content/20-sword-sound-effects-attacks-and-clashes",
+    "author": "StarNinjas",
+    "license": "CC0",
+    "original_sha256": "1466349e10779cfede4538657031bd87f3757d6cf5139cfad6552fa859007172",
+    "trim_start_seconds": 0.14487528344671202,
+    "gain": 0.2828275838429239
+  },
+  {
+    "file": "sword_clash.9.wav",
+    "original": "sword_clash.9.ogg",
+    "source": "https://opengameart.org/content/20-sword-sound-effects-attacks-and-clashes",
+    "author": "StarNinjas",
+    "license": "CC0",
+    "original_sha256": "aabd55ad99a1d171b50d741923077488a1021460fab35adf4fb7f36def49adc0",
+    "trim_start_seconds": 0.1710657596371882,
+    "gain": 0.47174767590099403
+  },
+  {
+    "file": "impact_meat01.wav",
+    "original": "qubodupImpactMeat01.flac",
+    "source": "https://opengameart.org/content/impact",
+    "author": "Iwan qubodup Gabovitch",
+    "license": "CC0",
+    "original_sha256": "366c9a37e90a19980ef8f2dec02bbf964ed02d0b683ee6f5472b354a50e7ee0e",
+    "trim_start_seconds": 0.0,
+    "gain": 0.7208359303391384
+  },
+  {
+    "file": "impact_meat02.wav",
+    "original": "qubodupImpactMeat02.flac",
+    "source": "https://opengameart.org/content/impact",
+    "author": "Iwan qubodup Gabovitch",
+    "license": "CC0",
+    "original_sha256": "c97ec34ab509cff9c43d8a5a43306e500ba235d9cc3d6be021cbc7b25218b3fe",
+    "trim_start_seconds": 0.0007709750566893424,
+    "gain": 0.7208359303391384
+  },
+  {
+    "file": "impact_metal.wav",
+    "original": "qubodupImpactMetal.flac",
+    "source": "https://opengameart.org/content/impact",
+    "author": "Iwan qubodup Gabovitch",
+    "license": "CC0",
+    "original_sha256": "ec8711b7779df95b127091cb74142a82d196a398afd7bd6ac68d7dafc8867c03",
+    "trim_start_seconds": 0.0,
+    "gain": 0.7208139073050014
+  },
+  {
+    "file": "impact_stone.wav",
+    "original": "qubodupImpactStone.flac",
+    "source": "https://opengameart.org/content/impact",
+    "author": "Iwan qubodup Gabovitch",
+    "license": "CC0",
+    "original_sha256": "c882a6cff88a297099928a0c46e7146b311342d14319a17eca9c19719d5b237d",
+    "trim_start_seconds": 0.0,
+    "gain": 0.7207478462760433
+  },
+  {
+    "file": "impact_wood.wav",
+    "original": "qubodupImpactWood.flac",
+    "source": "https://opengameart.org/content/impact",
+    "author": "Iwan qubodup Gabovitch",
+    "license": "CC0",
+    "original_sha256": "3b312120c5e16c83beb660902dd829f7dfa95a87caec35b5afcff722c6b19a12",
+    "trim_start_seconds": 0.0,
+    "gain": 0.720879980444879
+  }
+]
