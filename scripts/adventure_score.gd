@@ -22,7 +22,8 @@ func _ready() -> void:
 	battle.stream=loop_stream("res://assets/music/guardian_battle.wav")
 	add_child(music);add_child(battle);add_child(outgoing)
 	music.volume_db=-17;battle.volume_db=-80
-	music.play()
+	if not game.get_meta("defer_title_music",false):
+		music.play()
 
 func set_context(next:String)->void:
 	if next==context:return

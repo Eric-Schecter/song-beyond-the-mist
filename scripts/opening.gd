@@ -10,11 +10,13 @@ var overlay: Node2D
 var backgrounds: Texture2D
 var title_background: Texture2D
 var selection:=0
+var web_cover_waiting := false
 const LINES := [
 ["Once, the river connected every village. ","Princess Lia built canals along its banks, bringing life back to barren fields."],
 ["Then black mist crossed the northern border, and the capital fell silent. ","The Demon King took the princess. Even the spring's guardian turned against the valley."],
 ["You grew up in Morningwind, and have only just learned to wield a sword. ","Today, the riverbed is dry. A child who left to find water has not come home."]]
 func _ready():
+	web_cover_waiting = OS.has_feature("web") and "--web-cover" in OS.get_cmdline_user_args()
 	preload("res://scripts/game_locale.gd").restore()
 	title_font.font_names = PackedStringArray(["Georgia","Noto Serif","Songti SC"])
 	title_font.font_weight = 600
@@ -28,6 +30,7 @@ func _ready():
 	game=load("res://main.tscn").instantiate()
 	game.set_meta("opening_preview",true)
 	game.set_meta("music_context","title")
+	game.set_meta("defer_title_music",web_cover_waiting)
 	add_child(game)
 	title_font.fallbacks = [title_cjk]
 	game.set_physics_process(false)
@@ -44,7 +47,20 @@ func _ready():
 	layer.add_child(title_ink)
 	title_ink.draw.connect(paint_title)
 	music=game.score.music
+	if web_cover_waiting:
+		announce_web_ready()
+func announce_web_ready():
+	# Two rendered frames include title font rasterization and texture upload.
+	await RenderingServer.frame_post_draw
+	await RenderingServer.frame_post_draw
+	JavaScriptBridge.eval("window.songGameReady && window.songGameReady()")
 func _process(delta):
+	if web_cover_waiting:
+		if not JavaScriptBridge.eval("window.songCoverEntered === true"):
+			return
+		web_cover_waiting = false
+		age = 0.0
+		music.play()
 	age+=delta
 	if phase==4 and age>=1.5:
 		phase=5
@@ -66,7 +82,7 @@ func advance():
 		game.score.set_context("adventure")
 	age=0
 func _input(event):
-	if phase>=4:return
+	if web_cover_waiting or phase>=4:return
 	if phase==0:
 		if event is InputEventMouseMotion:
 			for i in range(3):

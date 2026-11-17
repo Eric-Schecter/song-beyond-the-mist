@@ -36,23 +36,28 @@ const engine = new Engine(config);
 const executable=config.executable;
 const pack=config.mainPack || `${executable}.pck`;
 let ready=false;
-// Download and initialize the runtime without starting the game clock or audio.
-Promise.all([engine.init(executable),engine.preloadFile(pack,pack)]).then(()=>{
+let failed=false;
+window.songCoverEntered=false;
+// Godot signals readiness only after the title scene has actually been drawn.
+window.songGameReady=()=>{
+ if(failed)return;
  ready=true;bar.style.display='none';status.textContent='Song Beyond the Mist · Click to play';
  play.disabled=false;play.hidden=false;
+};
+Promise.all([engine.init(executable),engine.preloadFile(pack,pack)]).then(async()=>{
+ status.textContent='Preparing the game…';bar.removeAttribute('value');
+ // Give the loading label a paint before the synchronous scene setup begins.
+ await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+ await engine.start({args:['--main-pack',pack,...(config.args || []),'--','--web-cover']});
 }).catch(showError);
-play.addEventListener('click',async()=>{
+play.addEventListener('click',()=>{
  if(!ready)return;
-
- ready=false;play.disabled=true;status.textContent='Beginning your journey…';
- try {
-  // start() reuses the prepared runtime and pack; no second resource download.
-  await engine.start({args:['--main-pack',pack,...(config.args || [])]});
-  document.getElementById('launch').remove();canvas.focus();
- }catch(error){showError(error);}
+ ready=false;play.disabled=true;
+ window.songCoverEntered=true;
+ document.getElementById('launch').remove();canvas.focus();
 });
 function showError(error){
- ready=false;play.hidden=true;bar.style.display='none';
+ failed=true;ready=false;play.hidden=true;bar.style.display='none';
  document.getElementById('error').textContent=String(error);status.textContent='Unable to load';
 }
 </script>
