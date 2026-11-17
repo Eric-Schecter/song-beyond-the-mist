@@ -4,6 +4,8 @@ var age := 0.0
 var phase := 0
 var music: AudioStreamPlayer
 var title_font := SystemFont.new()
+var title_ink: Node2D
+var title_cjk: FontFile
 var overlay: Node2D
 var backgrounds: Texture2D
 var title_background: Texture2D
@@ -16,13 +18,18 @@ func _ready():
 	preload("res://scripts/game_locale.gd").restore()
 	title_font.font_names = PackedStringArray(["Georgia","Noto Serif","Songti SC"])
 	title_font.font_weight = 600
+	title_font.multichannel_signed_distance_field = true
+	title_font.msdf_size = 96
+	title_cjk = load("res://assets/fonts/NotoSansCJKsc-Regular.otf").duplicate()
+	title_cjk.multichannel_signed_distance_field = true
+	title_cjk.msdf_size = 96
 	backgrounds=load("res://assets/refined/opening.png")
 	title_background=load("res://assets/refined/title_departure.png")
 	game=load("res://main.tscn").instantiate()
 	game.set_meta("opening_preview",true)
 	game.set_meta("music_context","title")
 	add_child(game)
-	title_font.fallbacks = [game.font]
+	title_font.fallbacks = [title_cjk]
 	game.set_physics_process(false)
 	game.set_process_input(false)
 	game.set_meta("opening_preview",true)
@@ -31,6 +38,11 @@ func _ready():
 	overlay=Node2D.new()
 	layer.add_child(overlay)
 	overlay.draw.connect(paint)
+	# Smooth scalable lettering on its own canvas; keep the pixel artwork untouched.
+	title_ink = Node2D.new()
+	title_ink.texture_filter = CanvasItem.TEXTURE_FILTER_LINEAR
+	layer.add_child(title_ink)
+	title_ink.draw.connect(paint_title)
 	music=game.score.music
 func _process(delta):
 	age+=delta
@@ -41,6 +53,7 @@ func _process(delta):
 		game.set_process_input(true)
 		game.queue_redraw()
 	overlay.queue_redraw()
+	title_ink.queue_redraw()
 func advance():
 	if phase>=4 or age<.35:return
 	game._play("confirm")
@@ -78,6 +91,14 @@ func choose_title():
 func label(value:String,p:Vector2,size:int,color:Color):
 	value=preload("res://scripts/game_locale.gd").text(value)
 	overlay.draw_string(title_font if size>=20 else game.font,p,value,HORIZONTAL_ALIGNMENT_LEFT,-1,size,color)
+func paint_title():
+	if phase != 0:return
+	var color := Color("#ede2c7")
+	if preload("res://scripts/game_locale.gd").language == "zh":
+		title_ink.draw_string(title_cjk,Vector2(143,91),preload("res://scripts/game_locale.gd").text("Song Beyond the Mist"),HORIZONTAL_ALIGNMENT_LEFT,-1,27,color)
+	else:
+		title_ink.draw_string(title_font,Vector2(141,72),"Song Beyond",HORIZONTAL_ALIGNMENT_LEFT,-1,21,color)
+		title_ink.draw_string(title_font,Vector2(142,100),"the Mist",HORIZONTAL_ALIGNMENT_LEFT,-1,25,color)
 func paint():
 	if phase==5:return
 	var skin=preload("res://scripts/ui_skin.gd")
@@ -90,11 +111,6 @@ func paint():
 		for x in range(320):
 			var shade:float=lerpf(0.0,.38,smoothstep(105,300,x))
 			overlay.draw_rect(Rect2(x,0,1,224),Color(.07,.085,.10,shade))
-		if preload("res://scripts/game_locale.gd").language=="zh":
-			label("Song Beyond the Mist",Vector2(143,91),27,Color("#ede2c7"))
-		else:
-			label("Song Beyond",Vector2(141,72),21,Color("#ede2c7"))
-			label("the Mist",Vector2(142,100),25,Color("#ede2c7"))
 		overlay.draw_line(Vector2(143,111),Vector2(285,111),Color(skin.GOLD,.42),.6,true)
 		var labels:=["New Journey","Language: English","Quit"]
 		for i in range(3):
