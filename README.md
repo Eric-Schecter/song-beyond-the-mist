@@ -1,4 +1,4 @@
-# Song Beyond the Mist · 雾尽之歌
+# Song Beyond the Mist
 
 ![Game cover](docs/images/cover.png)
 
